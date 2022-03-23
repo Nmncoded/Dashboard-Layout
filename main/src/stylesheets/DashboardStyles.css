@@ -1,0 +1,193 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* custom style */
+body {
+	background-color: rgba(180, 233, 215,0.8);
+}
+
+.header {
+  background-color: rgba(6, 6, 189, 0.8);
+  padding: 8px 16px;
+    display: flex;
+	flex-wrap: wrap;
+  align-items: center;
+}
+.icon {
+	font-size: 36px;
+	margin-right: 16px;
+	color: white;
+}
+.h-name {
+  color: rgba(255, 255, 255, 1);
+  font-size: 32px;
+  margin-right: 56px;
+}
+.header input {
+	color: rgba(0,0,0,0.7);
+	outline: 0;
+	border: 0;
+	font-size: 18px;
+	padding: 8px 12px;
+	background-color: rgba(6, 6, 189, 0);
+}
+
+/* aside section */
+
+.aside {
+	padding: 8px;
+	flex: 15%;
+	background-color: white;
+}
+
+.nav-links li {
+	padding: 16px 56px;
+}
+.nav-links li:hover {
+	background-color: rgba(230, 187, 230,0.2);
+}
+
+.nav-links li a {
+	text-decoration: none;
+	color: rgba(0,0,0,0.5);
+	font-size: 20px;
+}
+
+/* displayUI */
+
+.main {
+  display: flex;
+}
+
+.main-ui {
+	padding: 16px;
+	/* height: 100vh; */
+	flex: 85%;
+}
