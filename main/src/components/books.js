@@ -1,6 +1,8 @@
+import MainBooks from "../books-codes/b-index";
+
 function Books(){
     return (
-        <h1>Books</h1>
+        <MainBooks />
     )
 }
 export default Books;

@@ -8,15 +8,15 @@ class DisplayUI extends React.Component {
     render(){
         return (
             <>
-                <h1>🚀 Welcome to Homepage! 🚀</h1>
-                <ul>
-                    <li>
+                <h1 className='home-h1' >🚀 Welcome to Homepage! 🚀</h1>
+                <ul className='home-ul' >
+                    <li className='home-li' >
                         <Link to="/Articles" >ARTICLES PAGE</Link>
                     </li>
-                    <li>
+                    <li className='home-li' >
                         <Link to="/Books" >BOOKS PAGE</Link>
                     </li>
-                    <li>
+                    <li className='home-li' >
                         <Link to="/People" >PEOPLE PAGE</Link>
                     </li>
                 </ul>

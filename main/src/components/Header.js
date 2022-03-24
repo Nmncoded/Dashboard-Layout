@@ -6,7 +6,7 @@ function Header(){
         <header className="header">
             <span className='icon' ><FaCodepen /></span>
             <span className="h-name">Dashboard</span>
-            <input type="text" placeholder='Search documentation...'/>
+            <input className='h-input' type="text" placeholder='Search documentation...'/>
         </header>
     )
 }

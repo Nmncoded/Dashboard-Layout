@@ -35,10 +35,8 @@ ReactDom.render(<BrowserRouter>
             <DisplayUI />
         </Route>
         <Route path="/Articles/:id" component={SingleArticle} />
+        {/* <Route  component={ErrorPage} /> */}
         </section>
-        {/* <Route path={} >
-            <ErrorPage />
-        </Route> */}
     </main>
     
 </BrowserRouter>, document.getElementById(`root`));
