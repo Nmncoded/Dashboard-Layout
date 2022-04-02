@@ -4,9 +4,10 @@ import Aside from './components/Aside.js';
 import Header from './components/Header.js';
 import DisplayUI from './components/displayUI.js';
 import {BrowserRouter,Route} from 'react-router-dom';
-import Articles from './components/articles.js';
+// import Articles from './components/articles.js';
+import EnhancedArticles from './components/articles.js'
 import People from './components/people.js';
-import Books from './components/books.js';
+import EnhanceBooks from './components/books.js';
 import Help from './components/help.js';
 import './stylesheets/DashboardStyles.css';
 import data from './components/data.js';
@@ -20,13 +21,14 @@ ReactDom.render(<BrowserRouter>
         <Aside />
         <section className='main-ui'>
         <Route path="/Articles" exact>
-            <Articles data={data} />
+            {/* <Articles data={data} /> */}
+            <EnhancedArticles />
         </Route>
         <Route path="/People" exact>
             <People />
         </Route>
         <Route path="/Books" exact>
-            <Books />
+            <EnhanceBooks />
         </Route>
         <Route path="/Help" exact>
             <Help />

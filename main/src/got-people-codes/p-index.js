@@ -27,7 +27,7 @@ class PeopleApp extends React.Component {
             acc.push(house.people)
             return acc.flat();
         },[])
-        // console.log(allPeople)
+        // console.log(this.state.people, allPeople)
         this.setState({
             nameTag:"",
             people: allPeople.filter(person => person.name.includes(value))

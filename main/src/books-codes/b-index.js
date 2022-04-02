@@ -1,10 +1,11 @@
 import React from 'react';
 import data from './b-data.js';
 import {Link} from 'react-router-dom';
+import withSearch from '../components/withSearch';
 import './b-style.css';
 
 class MainBooks extends React.Component{
-    constructor(props){
+    /* constructor(props){
         super(props);
         this.state = {
             bookArr:[],
@@ -18,17 +19,17 @@ class MainBooks extends React.Component{
                 bookArr: data.filter(book => book.title.includes(value))
             }
         })
-    }
+    } */
     
     render(){
         return(
             (
                 <>
-                    <input type="text" id='input' placeholder='Search' onChange={this.handleChange} />
+                    <input type="text" id='input' placeholder='Search' onChange={this.props.handleChange} />
                     <ul className='b-ul' >
                 {
-                    (this.state.bookArr.length === 0 ? data: this.state.bookArr).map(book => {
-                        console.log(book)
+                    (this.props.data.length === 0 ? data: this.props.data).map(book => {
+                        // console.log(book)
                         return (
                             <li key={book.isbn} className="b-li">
                                 <img className="b-img" src={book.image} alt={book.isbn} />
@@ -45,5 +46,5 @@ class MainBooks extends React.Component{
         )
     }
 }
-
-export default MainBooks;
+let EnhancedBooks = withSearch(MainBooks,data);
+export default EnhancedBooks;

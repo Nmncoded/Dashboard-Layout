@@ -1,8 +1,8 @@
-import MainBooks from "../books-codes/b-index";
+import EnhancedBooks from "../books-codes/b-index";
 
-function Books(){
+function EnhanceBooks(){
     return (
-        <MainBooks />
+        <EnhancedBooks />
     )
 }
-export default Books;
+export default EnhanceBooks;

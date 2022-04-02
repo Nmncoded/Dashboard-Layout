@@ -1,13 +1,16 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import withSearch from './withSearch';
+import data from './data';
 
 class Articles extends React.Component {
-    constructor(props){
+    /* constructor(props){
         super(props);
         this.state = {
             p: [] ,
         }
     }
+
     handleChange = ({target}) => {
         let {value} = target;
         // console.log(value);
@@ -16,16 +19,16 @@ class Articles extends React.Component {
                 p: this.props.data.filter(article => article.title.includes(value))
             }
         })
-    }
+    } */
     
     render(){
-        
+        console.log(this.props);
         return (
             <>
-                <input id='input' type="text" onChange={this.handleChange}  placeholder="Search"/>
+                <input id='input' type="text" onChange={this.props.handleChange}  placeholder="Search"/>
                 <ul className="articles-data">
                     {
-                        (this.state.p.length === 0 ? this.props.data: this.state.p).map(p => {
+                        (this.props.data.length === 0 ? data: this.props.data).map(p => {
                             return(
                                 <li className='home-li' key={p.slug} >
                                     <Link to={`/Articles/${p.slug}`} >{p.title}</Link>
@@ -39,4 +42,5 @@ class Articles extends React.Component {
         )
     }
 }
-export default Articles;
+let EnhancedArticles  = withSearch(Articles,data);
+export default EnhancedArticles;
