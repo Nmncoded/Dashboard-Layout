@@ -2,6 +2,7 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import withSearch from './withSearch';
 import data from './data';
+import userContext from './userContext';
 
 class Articles extends React.Component {
     /* constructor(props){
@@ -20,9 +21,10 @@ class Articles extends React.Component {
             }
         })
     } */
-    
+    static contextType = userContext;
     render(){
-        console.log(this.props);
+        // console.log(this.context);
+        // console.log(this.props);
         return (
             <>
                 <input id='input' type="text" onChange={this.props.handleChange}  placeholder="Search"/>
